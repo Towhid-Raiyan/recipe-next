@@ -23,6 +23,18 @@ export default async function RecipeList() {
 
     return (
         <>
+            <div className="flex gap-5 justify-end mb-8">
+                <input
+                    className="input input-bordered input-accent py-2 rounded-md"
+                    type="text"
+                    name="search"
+                    placeholder="   Recipe Title"
+                    
+                />
+                <button className="bg-green-600 hover:bg-green-700 p-2 rounded-md text-white">
+                    Search
+                </button>
+            </div>
             {recipes.map((r) => (
                 <div
                     key={r._id}
